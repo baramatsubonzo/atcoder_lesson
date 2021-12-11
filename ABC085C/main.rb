@@ -3,11 +3,10 @@ n, y = gets.chomp.split(' ').map(&:to_i)
 array = []
 (0..n).each do |a|
   (0..(n-a)).each do |b|
-    (0..(n-a-b)).each do |c|
-      if 10000 * a + 5000 * b + 1000 * c == y && a + b + c == n
-        array << "#{a} #{b} #{c}"
-        break
-      end
+    c = n - a -b
+    if 10000 * a + 5000 * b + 1000 * c == y && a + b + c == n
+      array << "#{a} #{b} #{c}"
+      break
     end
   end
 end
