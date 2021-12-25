@@ -1,0 +1,1 @@
+puts gets.chomp.tr("69","96").reverse!
